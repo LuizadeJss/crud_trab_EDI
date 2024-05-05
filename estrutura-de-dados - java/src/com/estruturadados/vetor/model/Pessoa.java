@@ -1,21 +1,24 @@
 package com.estruturadados.vetor.model;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class Pessoa {
+public class Pessoa implements Serializable {
 
     Random random = new Random();
     int idRandom = random.nextInt(10000);
-    private int id;
+    private int id = idRandom;
     private String nome;
     private String email;
 
-    private void setId(int idRandom) {
-        this.id = idRandom;
+    public void setId(int id) {
+
+        this.id = id;
     }
 
     public int getId(){
-        return idRandom;
+
+        return this.id;
     }
     public void setNome(String nome) {
         this.nome = nome;
@@ -36,7 +39,7 @@ public class Pessoa {
     //apresenta os dados de cada objeto de maneira personalizada
     @Override
     public String toString(){
-        return "Nome: " + this.nome + " | Email: " + this.email;
+        return "Pessoa: " + this.getId() + "| Nome: " + this.nome + " | Email: " + this.email + "\n";
     }
 
 }

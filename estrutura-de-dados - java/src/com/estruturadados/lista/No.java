@@ -2,7 +2,9 @@ package com.estruturadados.lista;
 
 import com.estruturadados.vetor.model.Pessoa;
 
-public class No<T>{
+import java.io.Serializable;
+
+public class No<T> {
     private Pessoa pessoa;
     private No<Pessoa> proximo;
 
@@ -32,11 +34,20 @@ public class No<T>{
         this.proximo = proximo;
     }
 
+    public void adicionarNo(Pessoa pessoa) {
+        No<Pessoa> novoNo = new No<>(pessoa);
+        if (this.proximo == null) {
+            this.proximo = novoNo;
+        } else {
+            No<Pessoa> noTempo = this.proximo;
+            while (noTempo.proximo != null) {
+                noTempo = noTempo.proximo;
+            }
+            noTempo.proximo = novoNo;
+        }
+    }
     @Override
     public String toString() {
-        return "No{" +
-                "pessoa=" + pessoa +
-                ", proximo=" + proximo +
-                '}';
+        return " " + pessoa + proximo;
     }
 }

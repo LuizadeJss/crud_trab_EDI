@@ -50,7 +50,8 @@ public class ListaEncadeadaCrud {
                     listaDePessoas.excluirPessoa();
                     break;
                 case(6):
-                    System.out.println("Persistencia.................");
+                    listaDePessoas.persistirDados();
+                    break;
                 case(7):
                     listaDePessoas.listarPessoas();
                     //System.out.println(listaDePessoas);

@@ -9,7 +9,7 @@ public class CrudVetor {
 
         Scanner entrada = new Scanner(System.in);
 
-        Vetor vetorDePessoas = new Vetor(5);
+        Vetor vetorDePessoas = new Vetor(100);
 
         int opcao = 1;
 
@@ -40,7 +40,6 @@ public class CrudVetor {
                     vetorDePessoas.buscarPessoa();
                     break;
                 case(4):
-                    System.out.println("Ordena pessoas");
                     vetorDePessoas.ordenarPessoas();
                     break;
                 case(5):

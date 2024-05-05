@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pessoas>
+   <pessoa id="5354">
+      <nome>elemento1</nome>
+      <email></email>
+   </pessoa>
+   <pessoa id="1960">
+      <nome>elemento2</nome>
+      <email>teste@email</email>
+   </pessoa>
+   <pessoa id="513">
+      <nome>elemento3</nome>
+      <email></email>
+   </pessoa>
+</pessoas>
